@@ -1,0 +1,25 @@
+{
+  "name": "be-authentication",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AryanManhas/BackEnd-Authentication-Authorization.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AryanManhas/BackEnd-Authentication-Authorization/issues"
+  },
+  "homepage": "https://github.com/AryanManhas/BackEnd-Authentication-Authorization#readme",
+  "description": "",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2"
+  }
+}
