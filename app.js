@@ -8,7 +8,7 @@ app.get("/" , (req , res)=>{
 })
 
 app.get("/read" , (req , res)=>{
-    res.send("read page")
+    res.send("read page!!")
 })
 
 app.listen(3000);
