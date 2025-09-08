@@ -5,12 +5,22 @@ const app = express();
 
 const bcrypt = require('bcrypt');
 
-app.get("/" , (req , res)=>{
+const jwt = require("jsonwebtoken");
+const cookieParser = require("cookie-parser");
 
-    bcrypt.compare("polololoo", "$2b$10$AMHdStrG4ZaW3YKsj1ZXkuAkk9LIN5jjxQ2fZxnOXvPGA0.NxiQBW", function(err, result) {
-        console.log(result);
-    });
-    });
+app.use(cookieParser());
+
+app.get("/" , (req , res)=>{
+    let token = jwt.sign({email : "aryan@example.com"} , "secret")
+    res.cookie("token" , token)
+    res.send("done")
+})
+
+app.get("/read" , (req , res)=>{
+    let data = jwt.verify(req.cookies.token , "secret" );
+    console.log(data);
+    
+})
 
 
 app.listen(3000);
