@@ -65,7 +65,7 @@ app.post("/login", async (req, res) => {
     console.log("Stored Hashed Password:", user.password);
 
     // Compare the entered password with stored hash
-    const isMatch = await bcrypt.compare(req.body.password, user.password);
+    const isMatch = await bcrypt.compare(req.body.password, user.password); //req.body.password is current give password and user.password is saved password(hashed)
     if (!isMatch) {
         return res.send("Incorrect password");
     }
