@@ -84,5 +84,5 @@ app.get("/logout" , (req , res)=>{
     res.cookie("token" , "")
     res.redirect("/")
 })
-
-app.listen(3000);
+const port = 3000
+app.listen(port , ()=> console.log(`Server Started at Port ${port}`));
