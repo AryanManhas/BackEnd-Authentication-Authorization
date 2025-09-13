@@ -84,5 +84,10 @@ app.get("/logout" , (req , res)=>{
     res.cookie("token" , "")
     res.redirect("/")
 })
+
+// app.get("/logout" , (req , res)=>{
+//     res.cookie("token" , "")
+//     res.redirect("/")
+// })
 const port = 3000
 app.listen(port , ()=> console.log(`Server Started at Port ${port}`));
