@@ -8,11 +8,8 @@ const userSchema = mongoose.Schema({
         type: String,
         unique: true, // 🚨 This prevents duplicates at DB level
     },
-    age: Number,
-    posts : [
-        {type : mongoose.Schema.Types.ObjectId,
-        ref : "post"}
-    ]
+    password: String,
+    age: Number
 });
 
 module.exports = mongoose.model("user", userSchema);
