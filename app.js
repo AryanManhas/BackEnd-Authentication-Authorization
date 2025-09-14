@@ -90,4 +90,4 @@ app.get("/logout" , (req , res)=>{
 //     res.redirect("/")
 // })
 const port = 3000
-app.listen(port , ()=> console.log(`Server Started at Port ${port}`));
+app.listen(port , ()=> console.log(`Server Started at localhost://${port}`));
